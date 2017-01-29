@@ -24,7 +24,6 @@ class CoursesController < ApplicationController
 
   
   def create
-    binding.pry
     @course = current_user.courses.build(course_params)
       if @course.save
         redirect_to @course, notice: "One course is created successfully"
